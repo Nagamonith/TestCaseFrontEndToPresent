@@ -373,7 +373,15 @@
 }
 
 
+.btn-blue {
+  background-color: #007bff; /* Bootstrap primary blue */
+  color: white;
+  border: 1px solid #007bff;
+}
 
+.btn-blue:hover {
+  background-color: #0056b3;
+}
 
 /* Responsive */
 @media (max-width: 768px) {

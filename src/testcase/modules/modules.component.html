@@ -151,17 +151,18 @@
               </td>
 
               <!-- Actual Result -->
-              <td class="wrap-text">
-                <div class="popup-cell" (click)="openPopup(i, 'actual', $event)">
-                  <span>{{ getFormControl(i, 'actual').value || 'Click to enter' }}</span>
-                  <div *ngIf="isPopupOpen && popupIndex === i && popupField === 'actual'" class="popup-box">
-                    <textarea [formControl]="getFormControl(i, 'actual')" rows="5" cols="40"></textarea>
-                    <div class="popup-actions">
-                      <button (click)="closePopup(i)">Save</button>
-                    </div>
-                  </div>
-                </div>
-              </td>
+          <td class="wrap-text">
+  <div class="popup-cell" (click)="openPopup(i, 'actual', $event)">
+    <span>{{ getFormControl(i, 'actual').value || 'Click to enter' }}</span>
+    <div *ngIf="isPopupOpen && popupIndex === i && popupField === 'actual'" class="popup-box">
+      <textarea [formControl]="getFormControl(i, 'actual')" rows="5" cols="40"></textarea>
+      <div class="popup-actions">
+        <button (click)="closePopup(i)">Save</button>
+        <!-- <button (click)="closePopup(i)">Cancel</button> -->
+      </div>
+    </div>
+  </div>
+</td>
 
               <!-- Result -->
               <td class="wrap-text">
@@ -173,18 +174,18 @@
               </td>
 
               <!-- Remarks -->
-              <td class="wrap-text">
-                <div class="popup-cell" (click)="openPopup(i, 'remarks', $event)">
-                  <span>{{ getFormControl(i, 'remarks').value || 'Click to enter' }}</span>
-                  <div *ngIf="isPopupOpen && popupIndex === i && popupField === 'remarks'" class="popup-box">
-                    <textarea [formControl]="getFormControl(i, 'remarks')" rows="5" cols="40"></textarea>
-                    <div class="popup-actions">
-                      <button (click)="closePopup(i)">Save</button>
-                    </div>
-                  </div>
-                </div>
-              </td>
-
+       <td class="wrap-text">
+  <div class="popup-cell" (click)="openPopup(i, 'remarks', $event)">
+    <span>{{ getFormControl(i, 'remarks').value || 'Click to enter' }}</span>
+    <div *ngIf="isPopupOpen && popupIndex === i && popupField === 'remarks'" class="popup-box">
+      <textarea [formControl]="getFormControl(i, 'remarks')" rows="5" cols="40"></textarea>
+      <div class="popup-actions">
+        <button (click)="closePopup(i)">Save</button>
+        <!-- <button (click)="closePopup(i)">Cancel</button> -->
+      </div>
+    </div>
+  </div>
+</td>
               <!-- Uploads -->
               <td class="uploads-cell">
                 <label class="file-upload-label">

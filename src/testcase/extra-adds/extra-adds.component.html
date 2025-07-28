@@ -1,21 +1,21 @@
 <div class="container">
-  <h2 class="header">🚀 Module & Version Management</h2>
+  <h2 class="header"> Module & Version Management</h2>
 
   <!-- Independent Action Buttons -->
   <div class="action-buttons d-flex flex-wrap gap-2 align-items-center position-relative">
-    <button class="btn btn-success" (click)="showAddProductForm = true">
+    <button class="btn btn-silver" (click)="showAddProductForm = true">
       <i class="fas fa-plus"></i> Add Product
     </button>
-    <button class="btn btn-primary" (click)="handleAddModule()">
+    <button class="btn btn-silver" (click)="handleAddModule()">
       <i class="fas fa-cube"></i> Add Module
     </button>
-    <button class="btn btn-info" (click)="handleAddVersion()">
+    <button class="btn btn-silver" (click)="handleAddVersion()">
       <i class="fas fa-code-branch"></i> Add Version
     </button>
-    <button class="btn btn-warning" (click)="handleToggleModules()">
+    <button class="btn btn-silver" (click)="handleToggleModules()">
       <i class="fas fa-list"></i> {{ showModuleList ? 'Hide' : 'Show' }} Modules
     </button>
-    <button class="btn btn-primary" (click)="showProducts = !showProducts">
+    <button class="btn btn-silver" (click)="showProducts = !showProducts">
       <i class="fas fa-box-open"></i> {{ showProducts ? 'Hide' : 'Show' }} Products
     </button>
     
@@ -63,13 +63,13 @@
     </div>
     <div class="form-actions">
       <button 
-        class="btn btn-success me-2" 
+        class="btn btn-blue me-2" 
         (click)="addProduct()" 
         [disabled]="!newProductName.trim()"
       >
         <i class="fas fa-check"></i> Add
       </button>
-      <button class="btn btn-secondary" (click)="showAddProductForm = false; newProductName = ''">
+      <button class="btn btn-silver" (click)="showAddProductForm = false; newProductName = ''">
         <i class="fas fa-times"></i> Cancel
       </button>
     </div>
@@ -91,7 +91,7 @@
           <button class="btn btn-primary me-2" (click)="confirmProductSelection()" [disabled]="!selectedProductId">
             <i class="fas fa-check"></i> Continue
           </button>
-          <button class="btn btn-secondary" (click)="cancelProductSelection()">
+          <button class="btn btn-silver" (click)="cancelProductSelection()">
             <i class="fas fa-times"></i> Cancel
           </button>
         </div>
@@ -114,7 +114,7 @@
           [disabled]="!newModuleName.trim() || !newModuleVersion.trim()">
           <i class="fas fa-save"></i> Save Module
         </button>
-        <button class="btn btn-secondary" (click)="showAddModuleForm = false">
+        <button class="btn btn-silver" (click)="showAddModuleForm = false">
           <i class="fas fa-times"></i> Cancel
         </button>
       </div>
@@ -139,7 +139,7 @@
           [disabled]="!selectedModuleId || !newVersionName.trim()">
           <i class="fas fa-save"></i> Save Version
         </button>
-        <button class="btn btn-secondary" (click)="showAddVersionForm = false">
+        <button class="btn btn-silver" (click)="showAddVersionForm = false">
           <i class="fas fa-times"></i> Cancel
         </button>
       </div>
@@ -223,7 +223,7 @@
           <button *ngIf="mod.editing" class="btn btn-sm btn-success" (click)="saveEditing(mod)">
             <i class="fas fa-check"></i> Save
           </button>
-          <button *ngIf="mod.editing" class="btn btn-sm btn-secondary" (click)="mod.editing = false">
+          <button *ngIf="mod.editing" class="btn btn-silver" (click)="mod.editing = false">
             <i class="fas fa-times"></i> Cancel
           </button>
           <button class="btn btn-sm btn-outline-danger" (click)="deleteModule(mod.id)">
